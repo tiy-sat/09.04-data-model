@@ -4,6 +4,14 @@ While you may not use a SQL database for your project, we'll practice by creatin
 
 Start with the data model you worked on for your warmup today (warmup.md).
 
+### Start postresql
+
+To have launchd start postgresql now and restart at login:
+  brew services start postgresql
+
+Or, if you don't want/need a background service you can just run:
+  postgres -D /usr/local/var/postgres
+
 ## Easy Mode
 
 Based on what you learned today, update your data model and document it in a file called `data_model.md`.
@@ -11,6 +19,8 @@ Based on what you learned today, update your data model and document it in a fil
 ## Normal Mode
 
 Create at least three tables, with a few fields each, to match your data model.
+
+`psql` to connect to database.
 
 * Each table should have an `id` column that is `SERIAL PRIMARY KEY`
 * Each column should have an appropriate data type
@@ -25,3 +35,4 @@ Save and check both of those files into github.
 * Use `ALTER TABLE` to add a column to one of your tables.
 * Use `ALTER TABLE` to add default values to your columns as appropriate.
 * Use `ALTER TABLE` to add not null constraints to your columns as appropriate.
+* Use `ALTER TABLE` to add foreign key constraints between your tables.
